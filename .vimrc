@@ -74,6 +74,7 @@ set smartcase
 set hlsearch
 set whichwrap=b,s,h,l,<,>,[,],~
 set clipboard+=unnamed,autoselect
+setlocal spell spelllang=en_us
 
 
 "-------------------------------------------------------------------------------
