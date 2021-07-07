@@ -25,6 +25,7 @@ call dein#add('lifepillar/vim-solarized8')
 call dein#add('tomtom/tcomment_vim')
 call dein#add('Yggdroot/indentLine')
 call dein#add('vim-airline/vim-airline')
+call dein#add('vim-airline/vim-airline-themes')
 call dein#add('bronson/vim-trailing-whitespace')
 call dein#add('dhruvasagar/vim-table-mode')
 call dein#add('scrooloose/nerdtree')
@@ -283,3 +284,26 @@ let g:UltiSnipsExpandTrigger       = '<c-k>'
 let g:UltiSnipsJumpForwardTrigger  = '<c-f>'
 let g:UltiSnipsJumpBackwardTrigger = '<c-b>'
 command! SNIP UltiSnipsEdit
+
+
+"----------------------------------------------------------
+" vim-airline
+"----------------------------------------------------------
+let g:airline_theme = 'powerlineish'
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tagbar#enabled = 1
+let g:airline_skip_empty_sections = 1
+
+
+"----------------------------------------------------------
+" Buffer
+"----------------------------------------------------------
+"" Buffer nav
+noremap <leader>z :bp<CR>
+noremap <leader>q :bp<CR>
+noremap <leader>x :bn<CR>
+noremap <leader>w :bn<CR>
+"" Close buffer
+noremap <leader>c :bd<CR>
