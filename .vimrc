@@ -19,6 +19,7 @@ endif
 " Add or remove your plugins here like this:
 "call dein#add('Shougo/neosnippet.vim')
 "call dein#add('Shougo/neosnippet-snippets')
+call dein#add('easymotion/vim-easymotion')
 call dein#add('vim-scripts/vim-auto-save')
 call dein#add('altercation/vim-colors-solarized')
 call dein#add('lifepillar/vim-solarized8')
@@ -307,3 +308,39 @@ noremap <leader>x :bn<CR>
 noremap <leader>w :bn<CR>
 "" Close buffer
 noremap <leader>c :bd<CR>
+
+
+"----------------------------------------------------------
+" vim-easymotion
+"----------------------------------------------------------
+" <Leader><Leader>s Find and move by {char}
+" <Leader><Leader>w Move to {word} below
+" <Leader><Leader>b Move to {word} above
+" <Leader><Leader>e Move to the end of {word} below
+" <Leader><Leader>ge Move to the end of {word} above
+" <Leader><Leader>f{char} Move to input {char} below
+" <Leader><Leader>F{char} Move to input {char} above
+
+" <Leader>f{char} to move to {char}
+map  <Leader>F <Plug>(easymotion-bd-f)
+nmap <Leader>F <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+" nmap <Leader>s <Plug>(easymotion-s2)
+nmap <Leader>s <Plug>(easymotion-overwin-f2)
+" nmap s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Leader>l <Plug>(easymotion-bd-jk)
+nmap <Leader>l <Plug>(easymotion-overwin-line)
+" Move to line below
+map <Leader>j <Plug>(easymotion-j)
+" Move to line above
+map <Leader>k <Plug>(easymotion-k)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+" Search and move by any number of {char}
+nmap g/ <Plug>(easymotion-sn)
