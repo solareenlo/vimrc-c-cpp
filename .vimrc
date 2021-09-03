@@ -42,6 +42,7 @@ call dein#add('liuchengxu/vista.vim')
 call dein#add('SirVer/ultisnips')
 call dein#add('honza/vim-snippets')
 call dein#add('airblade/vim-gitgutter')
+call dein#add('cacharle/c_formatter_42.vim')
 " Required:
 call dein#end()
 
@@ -344,3 +345,10 @@ nmap <Leader>w <Plug>(easymotion-overwin-w)
 
 " Search and move by any number of {char}
 nmap g/ <Plug>(easymotion-sn)
+
+
+"----------------------------------------------------------
+" c_formatter_42.vim
+"----------------------------------------------------------
+let g:c_formatter_42_set_equalprg=1
+let g:c_formatter_42_format_on_save=1
