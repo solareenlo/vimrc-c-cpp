@@ -42,6 +42,7 @@ call dein#add('liuchengxu/vista.vim')
 call dein#add('SirVer/ultisnips')
 call dein#add('honza/vim-snippets')
 call dein#add('airblade/vim-gitgutter')
+call dein#add('tpope/vim-surround')
 call dein#add('cacharle/c_formatter_42.vim')
 " Required:
 call dein#end()
