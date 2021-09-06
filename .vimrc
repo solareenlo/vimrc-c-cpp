@@ -17,8 +17,6 @@ if !has('nvim')
 endif
 
 " Add or remove your plugins here like this:
-"call dein#add('Shougo/neosnippet.vim')
-"call dein#add('Shougo/neosnippet-snippets')
 call dein#add('easymotion/vim-easymotion')
 call dein#add('vim-scripts/vim-auto-save')
 call dein#add('altercation/vim-colors-solarized')
@@ -36,11 +34,11 @@ call dein#add('autozimu/LanguageClient-neovim', {
   \ 'rev': 'next',
   \ 'build': 'bash install.sh',
   \ })
+call dein#add('honza/vim-snippets')
+call dein#add('SirVer/ultisnips')
 call dein#add('Shougo/deoplete.nvim')
 call dein#add('Shougo/echodoc.vim')
 call dein#add('liuchengxu/vista.vim')
-call dein#add('SirVer/ultisnips')
-call dein#add('honza/vim-snippets')
 call dein#add('airblade/vim-gitgutter')
 call dein#add('tpope/vim-surround')
 call dein#add('cacharle/c_formatter_42.vim')
