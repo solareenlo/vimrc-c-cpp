@@ -9,6 +9,11 @@
 echo "export PATH=$HOME/Library/Python/3.9/bin:$PATH" >> .zshrc
 ```
 
+### vim-autoformat
+```shell
+echo "let g:python3_host_prog=\"$(which python3)\"" >> .vimrc
+```
+
 ## References
 - [solareenlo/42myvimrc](https://github.com/solareenlo/42myvimrc)
 
