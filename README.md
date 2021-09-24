@@ -26,8 +26,9 @@ echo "let g:python3_host_prog=\"$(which python3)\"" >> .vimrc
 - [cacharle/c_formatter_42.vim](https://github.com/cacharle/c_formatter_42.vim)
 
 ### ccls
-- ccls とは，c, cpp の LSP のサーバーのこと．
+- [Configure .ccls file for Vim](https://stackoverflow.com/questions/63528459/configure-ccls-file-for-vim?rq=1)
 - [MaskRay/ccls](https://github.com/MaskRay/ccls)
+- ccls とは，c, cpp の LSP のサーバーのこと．
 - [Implementations Language Servers](https://microsoft.github.io/language-server-protocol/implementors/servers/)
 
 ### clang-format
