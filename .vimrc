@@ -359,3 +359,12 @@ nmap g/ <Plug>(easymotion-sn)
 "----------------------------------------------------------
 let g:python3_host_prog="/Users/solareenlo/.brew/bin/python3"
 au BufWrite * :Autoformat
+
+
+"----------------------------------------------------------
+" Window
+"----------------------------------------------------------
+noremap <leader>h <C-w>h
+noremap <leader>l <C-w>l
+noremap <leader>j <C-w>j
+noremap <leader>k <C-w>k
