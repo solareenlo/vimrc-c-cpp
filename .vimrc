@@ -281,6 +281,7 @@ let g:vista#renderer#icons = {
 let g:UltiSnipsUsePythonVersion    = 3
 let g:UltiSnipsEditSplit           = 'normal'
 let g:UltiSnipsSnippetDirectories  = ['~/.cache/dein/repos/github.com/honza/vim-snippets/UltiSnips']
+let g:UltiSnipsSnippetDirectories  = [$HOME.'/.vim/UltiSnips']
 let g:UltiSnipsEnableSnipMate      = 0
 let g:UltiSnipsExpandTrigger       = '<c-k>'
 let g:UltiSnipsJumpForwardTrigger  = '<c-f>'
