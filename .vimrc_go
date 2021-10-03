@@ -1,0 +1,27 @@
+"-------------------------------------------------------------------------------
+" LanguageClient-neovim: LSP client
+" gopls: LSP server
+"-------------------------------------------------------------------------------
+" Launch gopls when Go files are in use
+let g:LanguageClient_serverCommands = {
+       \ 'go': ['gopls']
+       \ }
+" Run gofmt on save
+autocmd BufWritePre *.go :call LanguageClient#textDocument_formatting_sync()
+
+nmap <F5> <Plug>(lcn-menu)
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> gr :call LanguageClient#textDocument_rename()<CR>
+
+
+"-------------------------------------------------------------------------------
+" go-imports
+"-------------------------------------------------------------------------------
+call dein#add('mattn/vim-goimports')
+
+
+"-------------------------------------------------------------------------------
+" gotests-vim
+"-------------------------------------------------------------------------------
+call dein#add('buoto/gotests-vim')

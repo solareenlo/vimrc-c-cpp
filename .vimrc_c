@@ -1,0 +1,35 @@
+"-------------------------------------------------------------------------------
+" LanguageClient-neovim: LSP client
+" ccls: LSP server
+"-------------------------------------------------------------------------------
+let g:LanguageClient_serverCommands = {
+			\ 'c': ['ccls'],
+			\ }
+nmap <F5> <Plug>(lcn-menu)
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> gr :call LanguageClient#textDocument_rename()<CR>
+
+
+"----------------------------------------------------------
+" syntastic
+"----------------------------------------------------------
+call dein#add('vim-syntastic/syntastic')
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+
+"----------------------------------------------------------
+" c_formatter_42.vim
+"----------------------------------------------------------
+call dein#add('cacharle/c_formatter_42.vim')
+
+let g:c_formatter_42_set_equalprg=1
+let g:c_formatter_42_format_on_save=1
+" let g:c_formatter_42_exec="/Users/$USER/Library/Python/3.9/bin/c_formatter_42"

@@ -1,0 +1,49 @@
+"-------------------------------------------------------------------------------
+" LanguageClient-neovim: LSP client
+" ccls: LSP server
+"-------------------------------------------------------------------------------
+let g:LanguageClient_serverCommands = {
+			\ 'cpp': ['ccls'],
+			\ }
+nmap <F5> <Plug>(lcn-menu)
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> gr :call LanguageClient#textDocument_rename()<CR>
+
+
+"-------------------------------------------------------------------------------
+" syntastic
+"-------------------------------------------------------------------------------
+call dein#add('vim-syntastic/syntastic')
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_cpp_compiler="clang++"
+let g:syntastic_cpp_compiler_options=" -std=c++98"
+" let g:syntastic_cpp_compiler_options=" -std=c++11"
+" let g:syntastic_cpp_compiler_options=" -std=c++14"
+" let g:syntastic_cpp_compiler_options=" -std=c++17"
+let g:syntastic_cpp_cpplint_exec = 'cpplint'
+let g:syntastic_cpp_checkers = ['cpplint', 'gcc']
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
+let g:cpp_posix_standard = 1
+" let g:cpp_experimental_simple_template_highlight = 1
+let g:cpp_experimental_template_highlight = 1
+let g:cpp_concepts_highlight = 1
+let g:cpp_no_function_highlight = 1
+
+
+"----------------------------------------------------------
+" vim-autoformat
+"----------------------------------------------------------
+call dein#add('vim-autoformat/vim-autoformat')
+
+let g:python3_host_prog="/Users/solareenlo/.brew/bin/python3"
+au BufWrite * :Autoformat
