@@ -1,0 +1,24 @@
+snippet ndef
+#ifndef $1
+#define ${1:`!v toupper(expand("%:t:r"))`_`!v toupper(expand("%:e"))`_}
+
+#endif  // $1
+endsnippet
+
+snippet simp "Simple" !b
+`!p snip.rv = "Hello"`
+endsnippet
+
+snippet uuid "UUID" !b
+`!p import uuid
+if not snip.c:
+	snip.rv = uuid.uuid4().hex`
+endsnippet
+
+snippet indent
+Indent is: `!v indent(".")`.
+endsnippet
+
+snippet "rep (\d+) (\w+)" "Repeat" r
+`!p snip.rv=int(match.group(1))*match.group(2)`
+endsnippet
