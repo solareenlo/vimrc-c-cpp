@@ -24,7 +24,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_cpp_compiler="clang++"
-let g:syntastic_cpp_compiler_options=" -std=c++98"
+let g:syntastic_cpp_compiler_options=" -std=c++98 --pedantic"
 " let g:syntastic_cpp_compiler_options=" -std=c++11"
 " let g:syntastic_cpp_compiler_options=" -std=c++14"
 " let g:syntastic_cpp_compiler_options=" -std=c++17"
@@ -45,5 +45,5 @@ let g:cpp_no_function_highlight = 1
 "----------------------------------------------------------
 call dein#add('vim-autoformat/vim-autoformat')
 
-" let g:python3_host_prog="/Users/solareenlo/.brew/bin/python3"
+let g:python3_host_prog="~/.brew/bin/python3"
 au BufWrite * :Autoformat
