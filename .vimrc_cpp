@@ -28,7 +28,7 @@ let g:syntastic_cpp_compiler_options=" -std=c++98 --pedantic"
 " let g:syntastic_cpp_compiler_options=" -std=c++11"
 " let g:syntastic_cpp_compiler_options=" -std=c++14"
 " let g:syntastic_cpp_compiler_options=" -std=c++17"
-let g:syntastic_cpp_cpplint_exec = 'cpplint'
+let g:syntastic_cpp_cpplint_exec = 'cpplint --filter=-readability/braces'
 let g:syntastic_cpp_checkers = ['cpplint', 'gcc']
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
