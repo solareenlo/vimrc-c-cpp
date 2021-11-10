@@ -27,3 +27,11 @@ snippet fori "for int loop"
 for (int ${2:i} = 0; $2 < ${1:count}; $2${3:++}) {
 }
 endsnippet
+
+snippet class
+class ${1:`!v expand("%:t:r")`} {
+	public:
+		$1(${2});
+		virtual ~$1();
+};
+endsnippet
