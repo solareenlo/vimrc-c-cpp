@@ -14,7 +14,6 @@ snippet uuid "UUID" !b
 if not snip.c:
 snip.rv = uuid.uuid4().hex`
 endsnippet
-
 snippet indent
 Indent is: `!v indent(".")`.
 endsnippet
@@ -28,6 +27,16 @@ for (int ${2:i} = 0; $2 < ${1:count}; $2${3:++}) {
 }
 endsnippet
 
+snippet forj "for int loop"
+for (int ${2:j} = 0; $2 < ${1:count}; $2${3:++}) {
+}
+endsnippet
+
+snippet fork "for int loop"
+for (int ${2:k} = 0; $2 < ${1:count}; $2${3:++}) {
+}
+endsnippet
+
 snippet class
 class ${1:`!v expand("%:t:r")`} {
 	public:
@@ -37,4 +46,42 @@ class ${1:`!v expand("%:t:r")`} {
 
 		$1& operator=($1 const& rhs);
 };
+endsnippet
+
+snippet mod "Calurate mod"
+#define mod 998244353
+int inc(int a, int b)
+{
+    if (a + b < mod) {
+        return a + b;
+    }
+    return a + b - mod;
+}
+int dec(int a, int b)
+{
+    if (a < b) {
+        return a - b + mod;
+    }
+    return a - b;
+}
+int mul(int a, int b)
+{
+    return (int)((ll)a * b % mod);
+}
+int pow(int a, int b)
+{
+    int res = 1;
+    while (b > 0) {
+        if (b & 1) {
+            res = mul(res, a);
+        }
+        a = mul(a, a);
+        b >>= 1;
+    }
+    return res;
+}
+int inv(int x)
+{
+    return pow(x, mod - 2);
+}
 endsnippet
