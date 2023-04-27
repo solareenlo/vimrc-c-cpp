@@ -1,3 +1,14 @@
+snippet cin "Set cin"
+std::ios::sync_with_stdio(false);
+std::cin.tie(nullptr);
+endsnippet
+
+snippet mod "Set mod"
+#include <atcoder/modint>
+using namespace atcoder;
+using mint = modint998244353;
+endsnippet
+
 snippet ndef
 #ifndef $1
 #define ${1:`!v toupper(expand("%:t:r"))`_`!v toupper(expand("%:e"))`_}
